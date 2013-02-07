@@ -69,7 +69,7 @@ begin ;
    end
  else if readx <> 6
  then begin ;
-   Error4D     := Err4D_Invalid ;
+   Error4D     := Err4D_NAK ;
    Error_Inv4D := readx ;
    if @Callback4D  <> nil
    then Callback4D(Error4D, Error_Inv4D) ;
@@ -156,13 +156,6 @@ begin
  getAck ;
  word1 := getWord ;
  word2 := getWord ;
-end;
-
-function GetAckResSector(var sector : t4DSector) : word ;
-begin
- getAck ;
- Result := getWord ;
- getbytes(@Sector, 512) ;
 end;
 
 function GetAckResStr(var outstr : ansistring) : word ;

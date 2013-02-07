@@ -1,6 +1,6 @@
 ﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 		<PropertyGroup>
-			<ProjectGuid>{F3F2651C-7DD7-4F11-B7AA-E9BB20D6AE06}</ProjectGuid>
+			<ProjectGuid>{F76D705C-9C21-431C-83E2-8DC207243F66}</ProjectGuid>
 			<MainSource>bigdemo.dpr</MainSource>
 			<Config Condition="'$(Config)'==''">Debug</Config>
 			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
@@ -20,7 +20,7 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
-			<DCC_UnitSearchPath>..\include;..\lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_UnitSearchPath>..\lib;..\include;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
 			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;$(DCC_UnitAlias)</DCC_UnitAlias>
 			<DCC_DependencyCheckOutputName>bigdemo.exe</DCC_DependencyCheckOutputName>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
@@ -95,9 +95,11 @@
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Excluded_Packages>
-						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\TMSCOMMON.bpl">(untitled)</Excluded_Packages>
-						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\TMSSmoothControlsPackPkgD2010.bpl">TMS Advanced Smooth Controls Pack</Excluded_Packages>
-						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\advmemopkgd2010.bpl">TMS AdvMemo</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Mark\Documents\tmssoftware\TMS Component Pack\bpl\tmsexd2010.bpl">File C:\Users\Mark\Documents\tmssoftware\TMS Component Pack\bpl\tmsexd2010.bpl not found</Excluded_Packages>
+						<Excluded_Packages Name="C:\USERS\MARK\DOCUMENTS\RAD STUDIO\7.0\bpl\dcllmdrtl11_140.bpl">LMD 2011 - Common Designtime Enhancements</Excluded_Packages>
+						<Excluded_Packages Name="c:\users\mark\documents\rad studio\7.0\bpl\dcllmdrtlx11_140.bpl">LMD 2011 - Common Shared Components</Excluded_Packages>
+						<Excluded_Packages Name="c:\users\mark\documents\rad studio\7.0\bpl\dcllmddocking11_140.bpl">LMD 2011 - LMD-Tools DockingPack Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\SynEdit_D2010.bpl">SynEdit component suite</Excluded_Packages>
 						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
 						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
 					</Excluded_Packages>
