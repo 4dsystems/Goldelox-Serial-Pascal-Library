@@ -35,8 +35,10 @@ type
   tbaudratea = array[0..maxrates] of integer ;
 const
   fbinary = 1 ;
-  baudrates : tbaudratea = (   110,    300,    600,   1200,   2400,   4800,   9600, 14400, 19200, 31250, 38400, 56000, 57600,
-                            115200, 128000, 256000, 300000, 375000, 500000, 600000) ;
+  baudrates  : tbaudratea = (   110,    300,    600,   1200,   2400,   4800,   9600, 14400, 19200, 31250, 38400, 56000, 57600,
+                             115200, 128000, 256000, 300000, 375000, 500000, 600000) ;
+  baudratesG : tbaudratea = (baud_110, baud_300, baud_600, baud_1200, baud_2400, baud_4800, baud_9600, baud_14400, baud_19200, baud_31250, baud_38400, baud_56000, baud_57600,
+                            baud_115200, baud_128000, baud_256000, baud_300000, baud_375000, baud_500000, baud_600000) ;
 
   Image : array[0..2053] of byte = (0,  32,   0,  32,  16,   0, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF,
     $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $8C, $51, $84, $31, $FF, $FF,
@@ -421,7 +423,7 @@ begin
       writeln('Invalid baud rate ', paramstr(2)) ;
       halt(2) ;
       end;
-    baud_Rate := i ;
+    baud_Rate := baudratesg[i] ;
     end ;
 
   rc := opencomm(paramstr(1), baud_rate) ;
